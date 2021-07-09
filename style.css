@@ -1,10 +1,20 @@
 body {
   background-color: #111;
   color: #ddd;
+  padding-top: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 main {
+  padding-top: 3rem;
   display: grid;
   grid-template-columns: 15% 13% 1fr 13% 15%;
+}
+svg {
+  fill: #eee;
+  /* stroke: #eee; */
 }
 .article-wide {
   grid-column: 2 / span 3;
@@ -12,21 +22,212 @@ main {
 .article-narrow {
   grid-column: 3;
   font-family: nyt-imperial, georgia, "times new roman", times, serif;
+}
+.article-narrow.text {
   font-size: 1.25rem;
   line-height: 1.875rem;
 }
 header h1 {
   font-family: nyt-cheltenham, georgia, "times new roman", times, serif;
+  text-align: center;
+  font-style: italic;
+  padding-bottom: 1rem;
+  line-height: 1.5;
+  border-bottom: solid 1px #444;
 }
 figure {
-    margin: 0;
+  margin: 0;
 }
 img {
   width: 100%;
 }
-.nav-container {
-    display: flex;
+figcaption {
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
-ul {
-    list-style: none;
+.signup {
+  border-top: solid 1px #444;
+  display: flex;
+  align-items: center;
+}
+.signup .italic {
+  font-style: italic;
+}
+.signup .caps {
+  text-transform: uppercase;
+}
+.signup button {
+  height: 2.5rem;
+  border: solid 1px #999;
+  background-color: inherit;
+  color: inherit;
+  border-radius: 0;
+  width: 120px;
+}
+.subscriber {
+  font-family: helvetica, arial;
+  font-size: 0.9rem;
+  width: 40%;
+  text-align: center;
+  margin: auto;
+  font-weight: 700;
+}
+.subscriber-border {
+  border-bottom: solid 1px #999;
+  width: 33%;
+  margin: auto;
+}
+.relative {
+  position: relative;
+  z-index: -1;
+}
+.absolute {
+  position: absolute;
+  top: 0;
+}
+.inflation-header > #title {
+  font-weight: 600;
+}
+.inflation-header > #caption {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+.inflation-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: helvetica, arial;
+  font-size: 0.8rem;
+}
+.inflation-flex-container > p {
+  box-sizing: border-box;
+  width: 25%;
+  padding: 14% 2.5% 0 2.5%;
+  color: #133;
+}
+.video {
+  margin: 0.5rem 0;
+}
+.article-narrow.footer {
+  font-family: helvetica, arial;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+.print-link {
+  text-decoration: underline;
+}
+/* footer */
+footer {
+  font-family: helvetica, arial;
+  margin-left: 75px;
+  margin-right: 75px;
+}
+.border.top {
+  border-top: solid 2px #444;
+  border-bottom: solid 1px #444;
+  padding-bottom: 2px;
+  margin-bottom: 1rem;
+}
+.border.bottom {
+  border-bottom: solid 1px #444;
+}
+.nav-header {
+  display: flex;
+  width: 100%;
+}
+.nyt-icon {
+  /* border: solid 1px #8e8; */
+  height: 2rem;
+  flex-grow: 1;
+}
+.homepage-link {
+  font-size: 0.7rem;
+}
+.nav-container {
+  display: flex;
+  /* border: solid 1px #e88; */
+}
+.nav-item {
+  width: 14.5vw;
+  list-style: none;
+  padding-left: 0;
+  padding-top: 0;
+  font-size: 0.8rem;
+}
+.nav-item#subscribe {
+  border-left: 1px solid #444;
+  padding-left: 14px;
+}
+.nav-item > li {
+  line-height: 2;
+}
+.nav-item h5 {
+  margin: 0;
+  font-size: 0.8rem;
+}
+.subscribe-big > a {
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+}
+.svg-container {
+  width: 1.5rem;
+  justify-content: center;
+}
+.subscribe-big svg {
+  width: 1.2rem;
+  height: 0.8rem;
+}
+.subscribe-small {
+  font-size: 0.7rem;
+}
+.nav.footer {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  font-size: 0.7rem;
+  color: #999;
+  padding: 0;
+}
+.nav.footer > li {
+  padding: 0 0.4rem;
+  /* border: 1px solid #ada; */
+}
+
+/* Fixed navbar */
+.fixed-navbar > ul {
+  position: fixed;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  text-align: center;
+  background-color: #457;
+}
+.fixed-navbar > #top {
+  font-family: helvetica, arial;
+  padding: 0.3rem 0.1rem;
+  margin: 0;
+  font-size: 0.9rem;
+  border-bottom: solid 1px #999;
+  width: 100%;
+}
+#top > li {
+  width: fit-content;
+  padding: 0 0.6rem;
+  font-weight: 600;
+}
+.top-nyt-icon {
+  height: 1.5rem;
+  width: 200px;
+  flex-grow: 1;
+}
+#top > button {
+  color: inherit;
+  background-color: inherit;
+  border-radius: 3px;
+  border: 1px solid #777;
+  padding: 0.5rem 0.6rem;
+  margin-right: 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 800;
 }
